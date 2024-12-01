@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Driven Appointment Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head> -->
+
+
+<!-- Header -->
+<header class="bg-white py-3">
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img src="logo.png" alt="CureBoost Logo" height="50">
+            <!-- <h1 class="ms-3 mb-0" style="font-size: 24px;">CureBoost</h1> -->
+        </div>
+        <nav>
+            <a href="#features" class="text-dark">Features</a>
+            <a href="#queue" class="text-dark">Queue</a>
+            <a href="#contact" class="text-dark">Contact</a>
+        </nav>
+    </div>
+    <link rel="stylesheet" href="styles.css">
+</header>
+
+
+<body>
+  <header class="header">
+    <h1>CureBoost AI Appointment Dashboard</h1>
+  </header>
+
+  <main class="dashboard">
+    <!-- Patient Section -->
+    <section class="card patient">
+      <h2>Personalized Health Insights</h2>
+      <div class="info">
+        <p><strong>Next Appointment:</strong> Dec 5, 2024 | 10:30 AM</p>
+        <p><strong>Estimated Duration:</strong> 20 minutes</p>
+        <p><strong>AI Recommendation:</strong> Follow-up on glucose levels</p>
+      </div>
+      <button class="button">View Full Report</button>
+    </section>
+
+    <!-- AI-Controlled Appointments -->
+    <section class="card ai-scheduler">
+      <h2>AI-Driven Scheduler</h2>
+      <ul>
+        <li><strong>Current Patient:</strong> John Doe (15 minutes remaining)</li>
+        <li><strong>Next Patient:</strong> Jane Smith | ETA: 10:50 AM</li>
+        <li><strong>Pending Appointments:</strong> 5</li>
+      </ul>
+      <button class="button">Optimize Schedule</button>
+    </section>
+
+    <!-- Clinic Insights -->
+    <section class="card clinic">
+      <h2>Clinic Analytics</h2>
+      <canvas id="clinicChart"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 CureBoost. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
