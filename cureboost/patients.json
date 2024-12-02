@@ -1,0 +1,17 @@
+[
+    {
+      "id": "12345",
+      "name": "John Doe",
+      "next_appointment": "2024-12-05T10:30:00",
+      "estimated_duration": "20 minutes",
+      "glucose_level": 110
+    },
+    {
+      "id": "67890",
+      "name": "Jane Smith",
+      "next_appointment": "2024-12-06T14:00:00",
+      "estimated_duration": "30 minutes",
+      "glucose_level": 90
+    }
+  ]
+  

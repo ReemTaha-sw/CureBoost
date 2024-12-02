@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Medical Follow-Up Scheduler</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 20px;
+        }
+        #scheduler-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">AI-Driven Medical Follow-Up Scheduler</h1>
+        
+        <!-- Scheduler Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Appointments</h3>
+                <ul id="scheduler-list" class="list-group">
+                    <!-- List of appointments will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Optimize Scheduler Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <button id="optimize-scheduler" class="btn btn-primary btn-lg btn-block">Optimize Schedule</button>
+            </div>
+        </div>
+
+        <!-- Pending Appointments Counter -->
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <p><strong>Pending Appointments:</strong> <span id="pending-appointments">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulated data for the AI scheduler functionality
+        const schedulerData = {
+            "appointments": [
+                { "patientId": "12345", "name": "John Doe", "estimatedTime": "10:30 AM", "aiRecommendation": "Prioritize for glucose level check" },
+                { "patientId": "67890", "name": "Jane Smith", "estimatedTime": "11:00 AM", "aiRecommendation": "Monitor blood pressure" },
+                { "patientId": "13579", "name": "Sam Green", "estimatedTime": "9:00 AM", "aiRecommendation": "Cholesterol check" }
+            ]
+        };
+
+        // Function to optimize the schedule based on AI recommendations
+        async function optimizeSchedule() {
+            // Simulating an AI decision-making process for the scheduler (example: prioritize appointments based on urgency)
+            const optimizedAppointments = schedulerData.appointments.sort((a, b) => {
+                // Dummy logic: Prioritize patients who need more critical attention (for simplicity, we just sort by patient names here)
+                return a.name.localeCompare(b.name);
+            });
+
+            // Update the scheduler UI with optimized data
+            const schedulerList = document.getElementById('scheduler-list');
+            schedulerList.innerHTML = ''; // Clear the previous scheduler list
+
+            optimizedAppointments.forEach(appointment => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item');
+                li.innerHTML = `
+                    <strong>Patient:</strong> ${appointment.name} <br>
+                    <strong>Estimated Time:</strong> ${appointment.estimatedTime} <br>
+                    <strong>Recommendation:</strong> ${appointment.aiRecommendation}
+                `;
+                schedulerList.appendChild(li);
+            });
+
+            // Update the "pendingAppointments" count based on the new schedule
+            document.getElementById("pending-appointments").innerText = optimizedAppointments.length;
+        }
+
+        // Event listener for "Optimize Schedule" button
+        const optimizeButton = document.getElementById("optimize-scheduler");
+        optimizeButton.addEventListener("click", optimizeSchedule);
+
+        // Initial setup when the page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize the scheduler with the existing data
+            optimizeSchedule();
+        });
+    </script>
+</body>
+</html>

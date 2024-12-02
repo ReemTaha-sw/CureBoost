@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Integration with JSON Data</title>
+  <script>
+    // Sample Patient Data (JSON)
+    const patients = [
+      {
+        id: 1,
+        name: "John Doe",
+        age: 45,
+        medical_history: ["diabetes", "hypertension"],
+        upcoming_appointment: "2024-12-10T10:30:00Z",
+        health_metrics: {
+          heart_rate: 80,
+          blood_pressure: "130/85",
+          glucose_level: 150
+        }
+      },
+      {
+        id: 2,
+        name: "Jane Smith",
+        age: 30,
+        medical_history: ["asthma"],
+        upcoming_appointment: "2024-12-11T09:00:00Z",
+        health_metrics: {
+          heart_rate: 72,
+          blood_pressure: "120/80",
+          glucose_level: 90
+        }
+      },
+      {
+        id: 3,
+        name: "Alice Brown",
+        age: 60,
+        medical_history: ["arthritis", "obesity"],
+        upcoming_appointment: "2024-12-09T14:00:00Z",
+        health_metrics: {
+          heart_rate: 78,
+          blood_pressure: "140/90",
+          glucose_level: 200
+        }
+      }
+    ];
+
+    // AI Functionality: Prioritize Appointments
+    function prioritizeAppointments(patients) {
+      return patients.sort((a, b) => {
+        const urgencyA = a.health_metrics.glucose_level > 180 ? 1 : 0; // Example logic
+        const urgencyB = b.health_metrics.glucose_level > 180 ? 1 : 0;
+        return urgencyB - urgencyA; // Higher urgency first
+      });
+    }
+
+    // Example Usage
+    const prioritizedPatients = prioritizeAppointments(patients);
+
+    // Log the prioritized list
+    console.log("Prioritized Patients:", prioritizedPatients);
+  </script>
+</head>
+<body>
+  <h1>AI Integration Example</h1>
+  <p>Check the console to see how AI processes and prioritizes the patients.</p>
+</body>
+</html>
