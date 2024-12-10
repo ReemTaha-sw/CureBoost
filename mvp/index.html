@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CureBoost - Transforming Healthcare</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Custom Section Styles */
+    .highlight-section {
+      background: linear-gradient(140deg, #144182, #89b0de);
+      color: white;
+      padding: 50px 0;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      margin-bottom: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .highlight-section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .highlight-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .highlight-section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn-custom {
+      background-color: #144182;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      margin: 0 10px;
+    }
+
+    .btn-custom:hover {
+      background-color: #e67e22;
+      text-decoration: none;
+    }
+
+    .text-center-custom {
+      text-align: center;
+    }
+
+    /* Container for Buttons */
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo.png" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="patient.html">Patient Portal</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.html">Clinic Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to CureBoost</h1>
+    <p>Revolutionizing the healthcare experience with technology.</p>
+    <img src="assets/header_r.png" alt="Wave Design" class="wave">
+    <!-- <img src="assets/header.jpg" alt="Wave Design" class="wave"> -->
+  </header>
+  
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Our Core Features</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <img src="assets/q.jpg" alt="AI Queue" class="feature-image">
+        <h3>AI-Powered Queue Management</h3>
+        <p>Intelligently predicts waiting times and optimizes patient flow.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/real.jpg" alt="Real-Time Updates" class="feature-image">
+        <h3>Real-Time Updates</h3>
+        <p>Stay informed with live queue status and appointment changes.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/feed.jpg" alt="Feedback System" class="feature-image">
+        <h3>Feedback and Engagement</h3>
+        <p>Gamified feedback and loyalty schemes for enhanced patient engagement.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Portal Section -->
+  <section class="portal">
+    <div class="portal-section">
+      <!-- <img src="assets/patient-portal.png" alt="Patient Portal" class="portal-image"> -->
+      <h2>For Patients</h2>
+      <p>Manage your appointments, view queue status, and reduce waiting times.</p>
+      <a href="patient.html" class="btn">Go to Patient Portal</a>
+    </div>
+    <div class="portal-section">
+      <!-- <img src="assets/clinic-dashboard.png" alt="Clinic Dashboard" class="portal-image"> -->
+      <h2>For Clinics</h2>
+      <p>Streamline operations with AI-driven insights and queue management.</p>
+      <a href="admin.html" class="btn">Go to Clinic Dashboard</a>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, and Values Section -->
+  <section class="highlight-section">
+    <div class="container">
+      <h2 class="text-center-custom">Our Mission, Vision & Values</h2>
+      <p>We are on a mission to revolutionize healthcare by leveraging innovative technology, exceptional care, and a commitment to improving patient outcomes.</p>
+      <p>Our vision is to create a future where every patient receives personalized, efficient, and affordable care. Our core values include integrity, empathy, and excellence in everything we do.</p>
+      <div class="btn-container">
+        <a href="mission.html" class="btn-custom">Mission & Vision</a>
+        <a href="plan.html" class="btn-custom">Growth Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 CureBoost. Transforming Healthcare Together.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

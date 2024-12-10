@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Page</title>
+  <script src="patient.js" defer></script>
+</head>
+<body>
+  <h1>Patient Page</h1>
+  <label for="patientId">Enter Your Patient ID:</label>
+  <input type="number" id="patientId" placeholder="Patient ID">
+  <button onclick="getPatientDetails()">Get Details</button>
+
+  <div id="patientDetails"></div>
+  <button id="cancelAppointment" style="display: none;" onclick="cancelAppointment()">Cancel Appointment</button>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="patient.js" defer></script>
+  <style>
+    /* Center the form content */
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 77vh; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo.png" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="patient.html">Patient Portal</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.html">Clinic Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Patient Portal</h1>
+    <p>Track your appointment details and manage your queue status</p>
+    <img src="assets/header_r.png" alt="Wave Design" class="wave">
+  </header>
+
+  <!-- Main Content -->
+  <div class="centered-container">
+    <div class="container text-center">
+      <div class="mb-4">
+        <label for="patientId" class="form-label">Enter Your Patient ID:</label>
+        <input type="number" id="patientId" class="form-control mb-3" placeholder="Patient ID">
+        <button class="btn btn-primary" onclick="getPatientDetails()">Get Details</button>
+      </div>
+      <div id="patientDetails" class="details-section"></div>
+      <button id="cancelAppointment" class="btn btn-danger mt-3" style="display: none;" onclick="cancelAppointment()">Cancel Appointment</button>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 CureBoost. Transforming Healthcare Together.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
